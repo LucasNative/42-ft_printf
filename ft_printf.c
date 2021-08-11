@@ -6,7 +6,7 @@
 /*   By: ldaniel- <ldaniel-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 15:51:33 by ldaniel-          #+#    #+#             */
-/*   Updated: 2021/08/04 16:03:16 by ldaniel-         ###   ########.fr       */
+/*   Updated: 2021/08/11 12:45:55 by ldaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int	ft_printf(const char *format, ...)
 			count += write(1, &(*format), 1);
 		format++;
 	}
+	va_end(args);
 	return (count);
 }
